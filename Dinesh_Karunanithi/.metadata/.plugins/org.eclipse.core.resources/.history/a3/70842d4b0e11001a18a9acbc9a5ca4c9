@@ -1,0 +1,50 @@
+package org.xpath;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Task4 {
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dinesh karunanithi\\eclipse-workspace\\Dinesh_Karunanithi\\Dinesh\\dir1\\chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("http://toolsqa.com/automation-practice-form/");
+		
+		driver.manage().window().maximize();
+		
+		WebElement name = driver.findElement(By.xpath("//input[@name='firstname']"));
+		 name.sendKeys("Dinesh");
+		 
+		 WebElement lname = driver.findElement(By.id("lastname"));
+		 lname.sendKeys("Karunanithi");
+		 
+		 WebElement popup = driver.findElement(By.id("cookie_action_close_header"));
+		 popup.click();
+		 
+		 Thread.sleep(1000);
+		
+		
+		 
+		 /*WebElement sap = driver.findElement(By.xpath("//button[@id='buttonwithclass']"));
+		 sap.click();*/
+		 
+		 WebElement sex = driver.findElement(By.xpath("//input[@id='sex-0']"));
+		 sex.click();
+		 
+		 
+		 WebElement exp = driver.findElement(By.id("exp-0"));
+		 exp.click();
+		 
+		 WebElement date = driver.findElement(By.id("datepicker"));
+		 date.sendKeys("24/03/1994");
+		 
+		 
+		 
+		 
+		
+}
+
+}

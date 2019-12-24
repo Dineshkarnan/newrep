@@ -1,0 +1,39 @@
+package robotclass.org.test;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class Facebook_Robot {
+
+	public static void main(String[] args) throws AWTException, Throwable {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Dinesh karunanithi\\eclipse-workspace\\Selenium_Only\\dir\\chromedriver.exe");
+	
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.facebook.com/");
+		Actions action = new Actions(driver);
+		
+		WebElement copy = driver.findElement(By.xpath("//*[@id=\"email\"]"));
+		copy.sendKeys("dinesh");
+
+
+
+		  action.moveToElement(copy).doubleClick().sendKeys(Keys.CONTROL,"C").build().perform();
+		  Thread.sleep(6000);
+		       
+		WebElement paste = driver.findElement(By.xpath("//*[@id=\"pass\"]"));
+		
+		action.doubleClick(paste).sendKeys(Keys.CONTROL,"V");
+
+					}
+
+	}

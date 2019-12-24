@@ -1,0 +1,47 @@
+package exc2.tst;
+
+import java.util.Scanner;
+
+public class Marks {
+	public static void main(String[] args) {
+		Scanner ma = new Scanner(System.in);
+		/*Mark 1*/
+		System.out.println("Enter Mark 1 ");
+		int mark1 = ma.nextInt();
+		System.out.println("mark 1 is "+mark1);
+	
+		/*Mark 2*/
+		System.out.println("Enter Mark 2 ");
+		int mark2 = ma.nextInt();
+		System.out.println("mark 2 is "+mark2);
+	 
+		/*Mark 3*/
+		System.out.println("Enter Mark 3 ");
+		int mark3 = ma.nextInt();
+		System.out.println("mark 3 is "+mark1);
+	
+		/*Mark 4*/
+		System.out.println("Enter Mark 4 ");
+		int mark4 = ma.nextInt();
+		System.out.println("mark 4 is "+mark4);
+	
+		/*Mark 5*/
+		System.out.println("Enter Mark 5 ");
+		int mark5 = ma.nextInt();
+		System.out.println("mark 5 is "+mark5);
+	
+		/*Total marks*/
+		long total = ma.nextLong();
+		total=mark1+mark2+mark3+mark4+mark5;
+		System.out.println("Total mark is" +total);
+		
+		//float avg = ma.nextFloat();
+
+		//System.out.println("Average Mark is");
+		
+		
+		
+		
+	}
+
+}

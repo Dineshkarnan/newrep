@@ -1,0 +1,36 @@
+package org.xpath.test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class The_Xpath {
+	public static void main(String[] args) {
+		//set property
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dinesh karunanithi\\eclipse-workspace\\Selenium_Only\\dir\\chromedriver.exe");
+
+		//launch browser
+		WebDriver driver = new ChromeDriver();
+		 
+		//get url
+		driver.get("http://www.greenstechnologys.com/");
+		
+		WebElement btn=driver.findElement(By.xpath("//a[@href='contact.php']"));
+		
+		btn.click();
+		
+		//name
+		WebElement txtName=driver.findElement(By.xpath("//input[@type='text']"));
+		txtName.sendKeys("Dinesh Karunanithi");
+		
+		WebElement txtMailid=driver.findElement(By.id("InputEmail1"));
+		txtMailid.sendKeys("dnshkarthi726@gmail.com");
+		
+		WebElement btnSubmit=driver.findElement(By.id("submit"));
+		
+		btnSubmit.click();
+	}
+
+}

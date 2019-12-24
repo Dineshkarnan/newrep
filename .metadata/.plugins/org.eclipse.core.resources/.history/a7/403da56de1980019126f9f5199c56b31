@@ -1,0 +1,76 @@
+package org.xpath.test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Openqa {
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dinesh karunanithi\\eclipse-workspace\\Selenium_Only\\dir\\chromedriver.exe");
+
+		WebDriver driver=new ChromeDriver();
+		
+		driver.get("http://toolsqa.com/automation-practice-form/");
+		
+		WebElement name = driver.findElement(By.xpath("//input[@name='firstname']"));
+		name.sendKeys("Dinesh");
+		
+		Thread.sleep(600);
+		WebElement lastName = driver.findElement(By.xpath("//input[@name='lastname']"));
+		lastName.sendKeys("Karunanithi");
+		
+		Thread.sleep(500);
+		
+
+		//select sex
+		WebElement radio1=driver.findElement(By.xpath("//input[@id='sex-0']"));
+		WebElement radio2=driver.findElement(By.xpath("//input[@id='sex-1']"));
+		
+		
+		//male
+		radio1.click();
+		
+
+		Thread.sleep(600);
+		
+		WebElement experience = driver.findElement(By.xpath("//label[@class='control-label']"));
+		WebElement exp0 = driver.findElement(By.id("exp-0"));
+		WebElement exp1 = driver.findElement(By.id("exp-1"));
+		WebElement exp2 = driver.findElement(By.id("exp-2"));
+		WebElement exp3 = driver.findElement(By.id("exp-3"));
+		
+		
+		exp3.click();
+		
+		Thread.sleep(600);
+		WebElement datePicker = driver.findElement(By.xpath("//input[@id='datepicker']"));
+		datePicker.sendKeys("24/03/2019");
+		
+		
+		Thread.sleep(500);
+		
+		//Profession
+		WebElement pro1 = driver.findElement(By.id("profession-0"));
+		WebElement pro2 = driver.findElement(By.id("profession-1"));
+		
+		pro2.click();
+		
+		Thread.sleep(500);
+		WebElement photo = driver.findElement(By.id("photo"));
+		photo.sendKeys("D:\\My Phone\\UCDownloads");
+		
+		
+		Thread.sleep(700);
+		
+		Select dropDown = new Select(driver.findElement(By.id("continents")));
+		//dropDown.selectByVisibleText("Europe");
+		dropDown.selectByIndex(2);
+		
+		
+				
+	}
+
+	
+}

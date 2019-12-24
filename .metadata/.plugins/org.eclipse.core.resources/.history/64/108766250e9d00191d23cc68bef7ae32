@@ -1,0 +1,31 @@
+package mouseover.org.test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class Shop_Clues {
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dinesh karunanithi\\eclipse-workspace\\Selenium_Only\\dir\\chromedriver.exe");
+	
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.shopclues.com/wholesale.html");
+		
+		Actions action = new Actions(driver);
+		
+		action.moveToElement(driver.findElement(By.linkText("SPORTS&MORE"))).build().perform();
+		
+		
+		
+		//driver.findElement(By.linkText("Mobiles, Computers")).click();
+		
+		//driver.findElement(By.linkText("Power Banks")).click();
+		
+		
+		
+	
+	}
+
+}

@@ -1,0 +1,41 @@
+package org.selenium.test;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Selenium {
+	public static void main(String[] args) {
+		//Set property
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Dinesh karunanithi\\eclipse-workspace\\Selenium_Only\\dir\\geckodriver.exe");
+	
+	//launch Browser
+		WebDriver driver = new FirefoxDriver();
+		
+		//Enter the Url
+		driver.get("https://www.lvbankonline.in/lvbretail/RetailLogin.html");
+	
+		//print the title
+		String title = driver.getTitle();
+		System.out.println(title);
+		
+		//print the current url
+		String url = driver.getCurrentUrl();
+		System.out.println(url);
+		
+		//quit the browser
+		//driver.quit();
+		
+	//WebElement txtFrom = driver.findElement(By.name("q"));
+		//txtFrom.sendKeys("greenstechnology.com");
+		
+		//WebElement txtTo = driver.findElement(By.id("dest"));
+		//txtTo.sendKeys("chennai");
+		
+		
+	}
+
+}

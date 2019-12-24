@@ -1,0 +1,40 @@
+package org.xpath.test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Openqa {
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dinesh karunanithi\\eclipse-workspace\\Selenium_Only\\dir\\chromedriver.exe");
+
+		WebDriver driver=new ChromeDriver();
+		
+		driver.get("http://toolsqa.com/automation-practice-form/");
+		
+		WebElement name = driver.findElement(By.xpath("//input[@name='firstname']"));
+		name.sendKeys("Dinesh");
+		
+		Thread.sleep(600);
+		WebElement lastName = driver.findElement(By.xpath("//input[@name='lastname']"));
+		lastName.sendKeys("Karunanithi");
+		
+		Thread.sleep(500);
+		
+
+		//select sex
+		WebElement radio1=driver.findElement(By.xpath("//input[@id='sex-0']"));
+		WebElement radio2=driver.findElement(By.xpath("//input[@id='sex-1']"));
+		
+		
+		//male
+		radio1.click();
+		
+		WebElement experience = driver.findElement(By.xpath("//label[@class='control-label']"));
+		
+		
+		
+	}
+
+}
